@@ -23,3 +23,9 @@ pip install -r requirements.txt
 ```
 uvicorn main:app --reload
 ```
+
+## Run test
+
+```
+pytest test.py
+```
