@@ -1,0 +1,12 @@
+[
+  { "id": 1, "question_id": 1, "alternative": "compact" },
+  { "id": 2, "question_id": 1, "alternative": "utilitary" },
+  { "id": 3, "question_id": 1, "alternative": "sporting" },
+  { "id": 4, "question_id": 1, "alternative": "suv" },
+  { "id": 5, "question_id": 2, "alternative": "low" },
+  { "id": 6, "question_id": 2, "alternative": "average" },
+  { "id": 7, "question_id": 2, "alternative": "high" },
+  { "id": 8, "question_id": 3, "alternative": "electric" },
+  { "id": 9, "question_id": 3, "alternative": "fossil" },
+  { "id": 10, "question_id": 3, "alternative": "bio" }
+]
