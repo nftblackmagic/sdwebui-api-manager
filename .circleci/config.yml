@@ -46,9 +46,6 @@ jobs:
             . venv/bin/activate
             pytest test.py
 
-      - store_artifacts:
-          name: test report
-
 workflows:
   version: 2
   build:
