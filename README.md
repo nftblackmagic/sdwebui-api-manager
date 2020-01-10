@@ -29,3 +29,9 @@ uvicorn main:app --reload
 ```
 pytest test.py
 ```
+
+## API documentation (provided by Swagger UI)
+
+```
+http://127.0.0.1:8000/docs
+```
