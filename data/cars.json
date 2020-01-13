@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "name": "Volkswagen ID.3",
+    "fuel": "electric",
+    "price": "low",
+    "category": "compact",
+    "link": ""
+  },
+
+  {
+    "id": 2,
+    "name": "Porsche Taycan",
+    "fuel": "electric",
+    "price": "high",
+    "category": "sporting",
+    "link": ""
+  },
+
+  {
+    "id": 3,
+    "name": "Tesla Model 3",
+    "fuel": "electric",
+    "price": "average",
+    "category": "utilitary",
+    "link": ""
+  },
+
+  {
+    "id": 4,
+    "name": "Vauxhall e-Corsa",
+    "fuel": "electric",
+    "price": "low",
+    "category": "compact",
+    "link": ""
+  },
+
+  {
+    "id": 5,
+    "name": "Mini Electric",
+    "fuel": "electric",
+    "price": "average",
+    "category": "compact",
+    "link": ""
+  },
+
+  {
+    "id": 6,
+    "name": "Chevrolet Onix",
+    "fuel": "bio",
+    "price": "low",
+    "category": "compact",
+    "link": ""
+  },
+
+  {
+    "id": 7,
+    "name": "Ford Ka",
+    "fuel": "bio",
+    "price": "low",
+    "category": "compact",
+    "link": ""
+  },
+
+  {
+    "id": 8,
+    "name": "Hyundai Creta",
+    "fuel": "fossil",
+    "price": "average",
+    "category": "suv",
+    "link": ""
+  },
+
+  {
+    "id": 9,
+    "name": "Chery Tiggo 2",
+    "fuel": "bio",
+    "price": "low",
+    "category": "suv",
+    "link": ""
+  },
+
+  {
+    "id": 10,
+    "name": "Chevrolet Opala",
+    "fuel": "fossil",
+    "price": "high",
+    "category": "sporting",
+    "link": ""
+  }
+]
