@@ -1,6 +1,8 @@
 from starlette.testclient import TestClient
 from main import app
 
+import json
+
 client = TestClient(app)
 
 
@@ -32,3 +34,16 @@ def test_read_alternatives():
     response = client.get('/alternatives/1')
     assert response.status_code == 200
     assert response.json()[1]['question_id'] == 1
+
+
+def test_create_answer():
+    body = {"user_id": 1, "answers": [{"question_id": 1, "alternative_id": 2}, {
+        "question_id": 2, "alternative_id": 2}, {"question_id": 2, "alternative_id": 2}]}
+    body = json.dumps(body)
+    response = client.post('/answer', data=body)
+    assert response.status_code == 201
+
+
+def test_read_result():
+    response = client.get('/result/1')
+    assert response.status_code == 200
