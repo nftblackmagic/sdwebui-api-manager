@@ -1,21 +1,10 @@
 from fastapi import FastAPI
 from starlette.responses import Response
-from pydantic import BaseModel
-from typing import List
 
+from app.models import UserAnswer
 import json
 
 app = FastAPI()
-
-
-class Answer(BaseModel):
-    question_id: int
-    alternative_id: int
-
-
-class UserAnswer(BaseModel):
-    user_id: int
-    answers: List[Answer]
 
 
 @app.get("/")
@@ -60,15 +49,15 @@ def read_alternatives(question_id: int):
 
 
 @app.post("/answer", status_code=201)
-def create_answer(userAnswer: UserAnswer):
-    userAnswer = userAnswer.dict()
+def create_answer(payload: UserAnswer):
+    payload = payload.dict()
     answers = []
     result = []
 
     with open('app/data/alternatives.json') as stream:
         alternatives = json.load(stream)
 
-    for question in userAnswer['answers']:
+    for question in payload['answers']:
         for alternative in alternatives:
             if alternative['question_id'] == question['question_id']:
                 answers.append(alternative['alternative'])
