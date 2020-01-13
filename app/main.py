@@ -14,7 +14,7 @@ def root():
 
 @app.get("/user")
 def read_user():
-    with open('app/data/users.json') as stream:
+    with open('data/users.json') as stream:
         users = json.load(stream)
 
     return users
@@ -22,7 +22,7 @@ def read_user():
 
 @app.get("/question/{position}", status_code=200)
 def read_questions(position: int, response: Response):
-    with open('app/data/questions.json') as stream:
+    with open('data/questions.json') as stream:
         questions = json.load(stream)
 
     if position > len(questions) or position == 0:
@@ -38,7 +38,7 @@ def read_questions(position: int, response: Response):
 def read_alternatives(question_id: int):
     alternatives_question = []
 
-    with open('app/data/alternatives.json') as stream:
+    with open('data/alternatives.json') as stream:
         alternatives = json.load(stream)
 
     for alternative in alternatives:
@@ -54,7 +54,7 @@ def create_answer(payload: UserAnswer):
     answers = []
     result = []
 
-    with open('app/data/alternatives.json') as stream:
+    with open('data/alternatives.json') as stream:
         alternatives = json.load(stream)
 
     for question in payload['answers']:
@@ -63,7 +63,7 @@ def create_answer(payload: UserAnswer):
                 answers.append(alternative['alternative'])
                 break
 
-    with open('app/data/cars.json') as stream:
+    with open('data/cars.json') as stream:
         cars = json.load(stream)
 
     for car in cars:
@@ -77,13 +77,13 @@ def create_answer(payload: UserAnswer):
 def read_result(user_id: int):
     user_result = []
 
-    with open('app/data/results.json') as stream:
+    with open('data/results.json') as stream:
         results = json.load(stream)
 
-    with open('app/data/users.json') as stream:
+    with open('data/users.json') as stream:
         users = json.load(stream)
 
-    with open('app/data/cars.json') as stream:
+    with open('data/cars.json') as stream:
         cars = json.load(stream)
 
     for result in results:
