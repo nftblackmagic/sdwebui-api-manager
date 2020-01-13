@@ -59,7 +59,7 @@ def read_alternatives(question_id: int):
     return alternatives_question
 
 
-@app.post("/answer")
+@app.post("/answer", status_code=201)
 def create_answer(userAnswer: UserAnswer):
     userAnswer = userAnswer.dict()
     answers = []
