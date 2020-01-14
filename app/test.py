@@ -27,7 +27,7 @@ def test_read_question():
 def test_read_question_invalid():
     response = client.get('/question/0')
     assert response.status_code == 400
-    assert response.json() == {'message': 'Error'}
+    assert response.json() == {'detail': 'Error'}
 
 
 def test_read_alternatives():
