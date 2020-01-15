@@ -21,13 +21,13 @@ pip install -r requirements.txt
 ## Run server
 
 ```
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
 ## Run test
 
 ```
-pytest test.py
+pytest app/test.py
 ```
 
 ## API documentation (provided by Swagger UI)
