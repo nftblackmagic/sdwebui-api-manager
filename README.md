@@ -12,22 +12,38 @@ A simple example of using Fast API in Python.
 git clone https://github.com/marciovrl/fastapi-example.git
 ```
 
-## Install dependencies
+## Run local
+
+### Install dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-## Run server
+### Run server
 
 ```
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
-## Run test
+### Run test
 
 ```
-pytest test.py
+pytest app/test.py
+```
+
+## Run with docker
+
+### Run server
+
+```
+docker-compose up -d --build
+```
+
+### Run test
+
+```
+docker-compose exec app pytest app/test.py
 ```
 
 ## API documentation (provided by Swagger UI)

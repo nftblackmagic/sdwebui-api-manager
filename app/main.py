@@ -3,7 +3,6 @@ from starlette.responses import Response
 
 from app.models import UserAnswer
 from app import api
-import json
 
 app = FastAPI()
 
