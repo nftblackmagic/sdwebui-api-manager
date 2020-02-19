@@ -3,8 +3,24 @@ version: "3.7"
 services:
   app:
     build: .
+    container_name: app
     command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
     volumes:
       - ./:/src/
     ports:
       - 8002:8000
+    environment:
+      - DATABASE_URL=postgresql://fastapi:fastapi@db/fastapi
+
+  db:
+    image: postgres:12.1-alpine
+    container_name: db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=fastapi
+      - POSTGRES_PASSWORD=fastapi
+      - POSTGRES_DB=fastapi
+
+volumes:
+  postgres_data:
