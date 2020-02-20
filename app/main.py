@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from starlette.responses import Response
 
-from app.models import UserAnswer
-from app import api
+from app.db.models import UserAnswer
+from app.api import api
 
 app = FastAPI()
 
