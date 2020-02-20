@@ -43,7 +43,7 @@ docker-compose up -d --build
 ### Run test
 
 ```
-docker-compose exec app pytest app/test.py
+docker-compose exec app pytest test/test.py
 ```
 
 ## API documentation (provided by Swagger UI)
