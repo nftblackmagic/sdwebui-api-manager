@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from starlette.responses import Response
 
-from app.db.models import UserAnswer
+from app.db.models import UserAnswer, Img2imgArgs
 from app.api import api
 
 app = FastAPI()
@@ -42,3 +42,10 @@ def create_answer(payload: UserAnswer):
 @app.get("/result/{user_id}")
 def read_result(user_id: int):
     return api.read_result(user_id)
+
+
+@app.post("/img2img", status_code=201)
+def img2img(payload: Img2imgArgs):
+    payload = payload.dict()
+
+    return api.img2img(payload)

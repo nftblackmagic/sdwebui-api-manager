@@ -77,3 +77,8 @@ def read_result(user_id: int):
                     user_result.append(car)
 
     return user_result
+
+
+def img2img(payload):
+
+    return payload["prompt"]
