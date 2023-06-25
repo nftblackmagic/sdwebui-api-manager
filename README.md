@@ -18,7 +18,7 @@ https://github.com/marciovrl/fastapi-example.git
 
 ## Run local
 
-# Before run this project, please make sure you launched the stable diffusion webui api.
+### Before run this project, please make sure you launched the stable diffusion webui api.
 
 ### Install dependencies
 
