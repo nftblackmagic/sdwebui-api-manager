@@ -1,5 +1,7 @@
 import json
-
+import requests
+import urllib.parse as urlparse
+from urllib.parse import urlencode
 
 def read_user():
     with open('data/users.json') as stream:
@@ -81,4 +83,55 @@ def read_result(user_id: int):
 
 def img2img(payload):
 
-    return payload["prompt"]
+    url = 'http://0.0.0.0:7860/sdapi/v1/img2img'
+
+    headers = {
+        'Content-Type': 'application/json',
+    }
+
+    filter_data = {}
+
+    for k,v in payload.items():
+        if payload[k] != None:
+            filter_data[k] = v
+
+    response = requests.post(url, headers=headers, data=json.dumps(filter_data))    
+
+    res = response.json()
+
+    print(res)
+
+    return res
+
+def txt2img(payload):
+
+    url = 'http://0.0.0.0:7860/sdapi/v1/txt2img'
+
+    headers = {
+        'Content-Type': 'application/json',
+    }
+
+    filter_data = {}
+
+    for k,v in payload.items():
+        if payload[k] != None:
+            filter_data[k] = v
+
+    response = requests.post(url, headers=headers, data=json.dumps(filter_data))    
+
+    res = response.json()
+
+    return res
+
+def progress():
+    url = 'http://0.0.0.0:7860/sdapi/v1/progress?skip_current_image=false'
+
+    headers = {
+        'Content-Type': 'application/json',
+    }
+
+    response = requests.get(url, headers=headers)
+
+    res = response.json()
+
+    return res
