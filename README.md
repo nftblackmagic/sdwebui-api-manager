@@ -26,7 +26,7 @@ pip install -r requirements.txt
 ### Run server
 
 ```
-uvicorn app.main:app --reload
+uvicorn app.main:app --reload --host 0.0.0.0 --port 5001
 ```
 
 ### Run test
