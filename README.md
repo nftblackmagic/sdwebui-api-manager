@@ -10,12 +10,15 @@ This repo is aiming to solve the above problems.
 ## Preconditions:
 
 - Python 3
+- Stable diffusion Webui
 
 ## Inspired by the project
 
 https://github.com/marciovrl/fastapi-example.git
 
 ## Run local
+
+# Before run this project, please make sure you launched the stable diffusion webui api.
 
 ### Install dependencies
 
