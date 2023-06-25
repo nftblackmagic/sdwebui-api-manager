@@ -16,11 +16,11 @@ def img2img(payload):
         if payload[k] != None:
             filter_data[k] = v
 
+    print("img2img settings",filter_data)
+
     response = requests.post(url, headers=headers, data=json.dumps(filter_data))    
 
     res = response.json()
-
-    print(res)
 
     return res
 
