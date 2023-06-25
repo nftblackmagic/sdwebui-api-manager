@@ -5,6 +5,8 @@ Stable diffusion webui provides a powerful tool for AI image generation. However
 1. a blocking REST api call, which might take more than 30s to return the final value. Most gateways don't allow such long blocking time on api call.
 2. webui api is a signle thread process. Once the thread is occupied, other webui api will fail. (There is a multi thread mode in stable diffusion webui)
 
+This repo is aiming to solve the above problems.
+
 ## Preconditions:
 
 - Python 3
