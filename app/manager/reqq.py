@@ -2,6 +2,7 @@ import uuid
 import queue
 import threading
 import time
+import copy
 from app.api import api 
 
 current_request = {}
@@ -46,20 +47,20 @@ def start_process_queue():
         print ("current_request is processing", current_request.get("request_id"), current_request.get("status"))
         if(current_request.get("type") == "txt2img"):
             res = api.txt2img(current_request.get("payload"))
-            final_request = current_request
+            final_request = copy.deepcopy(current_request)
             final_request["status"] = "done"
             final_request["result"] = res
-            current_request["status"] = "done"
             final_results[final_request.get("request_id")] = final_request
             print("request is complete", final_request.get("request_id"), final_request.get("status"))
+            current_request["status"] = "finishing"
         if(current_request.get("type") == "img2img"):
             res = api.img2img(current_request.get("payload"))
-            final_request = current_request
+            final_request = copy.deepcopy(current_request)
             final_request["status"] = "done"
             final_request["result"] = res
-            current_request["status"] = "done"
             final_results[final_request.get("request_id")] = final_request
             print("request is complete", final_request.get("request_id"), final_request.get("status"))
+            current_request["status"] = "finishing"
 
 def add_req_queue(payload, type):
     filter_data = {}
@@ -93,8 +94,9 @@ def check_variable_in_queue(q, var):
 
 def get_result(request_id):
     global final_results
-    print("final_results", final_results.keys())
+    print("final_results", final_results.keys(), request_id)
     if(request_id in final_results):
+        print("Found final result", request_id)
         return final_results[request_id]
     elif(request_id == current_request.get("request_id")):
         res = api.progress()
@@ -104,6 +106,6 @@ def get_result(request_id):
     else:
         index = check_variable_in_queue(requests_queue, request_id)
         if(index > -1):
-            return {"status": "pending", "request_id": request_id, "pending_count": index}
+            return {"status": "pending", "request_id": request_id, "pending_count": index+1}
         else:
             return {"status": "not_found"}
