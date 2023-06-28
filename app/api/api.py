@@ -71,7 +71,7 @@ def get_options():
         'Content-Type': 'application/json',
     }
 
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=5)
 
     res = response.json()
 

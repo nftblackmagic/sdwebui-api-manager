@@ -4,6 +4,8 @@ import threading
 import time
 import copy
 from app.api import api
+from fastapi import HTTPException
+
 
 current_request = {}
 final_results = {}
@@ -73,6 +75,12 @@ def start_process_queue():
 
 
 def add_req_queue(payload, type):
+    try:
+        api.get_options()
+    except:
+        raise HTTPException(
+            status_code=500, detail="No options found, please check backend is running correctly.")
+
     filter_data = {}
     options = {}
 
