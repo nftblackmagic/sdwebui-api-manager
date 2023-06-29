@@ -64,7 +64,7 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckp
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/anything-v3.0/resolve/main/Anything-V3.0-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.ckpt
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.vae.pt
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/xiaozaa/animaTest/resolve/main/animeoutlineV4_16.safetensors -d ./stable-diffusion-webui/models/Lora -o animeoutlineV4_16.safetensors
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/SG161222/Realistic_Vision_V2.0/resolve/main/Realistic_Vision_V2.0-fp16-no-ema.safetensors -d ./stable-diffusion-webui/models/Stable-diffusion -o Realistic_Vision_V2.0-fp16-no-ema.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/SG161222/Realistic_Vision_V2.0/resolve/main/Realistic_Vision_V2.0-fp16-no-ema.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Realistic_Vision_V2.0-fp16-no-ema.ckpt
 
 sed -i -e '/    api = create_api/a\' -e '    modules.script_callbacks.before_ui_callback()' ./stable-diffusion-webui/webui.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' ./stable-diffusion-webui/modules/shared.py
