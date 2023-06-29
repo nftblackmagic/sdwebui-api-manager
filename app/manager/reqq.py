@@ -138,7 +138,7 @@ def get_result(request_id):
 def compare_options(options):
     global current_options
     is_change = False
-    print("compare_options", )
+    print("compare_options", options)
     for k, v in options.items():
         if (current_options.get(k) != v):
             is_change = True
