@@ -9,7 +9,6 @@ git clone https://github.com/camenduru/stable-diffusion-webui-huggingface ./stab
 git clone https://github.com/camenduru/sd-civitai-browser ./stable-diffusion-webui/extensions/sd-civitai-browser
 git clone https://github.com/kohya-ss/sd-webui-additional-networks ./stable-diffusion-webui/extensions/sd-webui-additional-networks
 git clone https://github.com/Mikubill/sd-webui-controlnet ./stable-diffusion-webui/extensions/sd-webui-controlnet
-git clone https://github.com/fkunn1326/openpose-editor ./stable-diffusion-webui/extensions/openpose-editor
 git clone https://github.com/jexom/sd-webui-depth-lib ./stable-diffusion-webui/extensions/sd-webui-depth-lib
 git clone https://github.com/hnmr293/posex ./stable-diffusion-webui/extensions/posex
 git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor ./stable-diffusion-webui/extensions/sd-webui-3d-open-pose-editor
