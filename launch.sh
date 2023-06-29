@@ -1,16 +1,14 @@
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
-git clone https://huggingface.co/embed/negative ./stable-diffusion-webui/embeddings/negative
-git clone https://huggingface.co/embed/lora ./stable-diffusion-webui/models/Lora/positive
+# git clone https://huggingface.co/embed/negative ./stable-diffusion-webui/embeddings/negative
+# git clone https://huggingface.co/embed/lora ./stable-diffusion-webui/models/Lora/positive
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d ./stable-diffusion-webui/models/ESRGAN -o 4x-UltraSharp.pth
 wget https://raw.githubusercontent.com/camenduru/stable-diffusion-webui-scripts/main/run_n_times.py -O ./stable-diffusion-webui/scripts/run_n_times.py
-git clone https://github.com/deforum-art/deforum-for-automatic1111-webui ./stable-diffusion-webui/extensions/deforum-for-automatic1111-webui
 git clone https://github.com/camenduru/stable-diffusion-webui-images-browser ./stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
 git clone https://github.com/camenduru/stable-diffusion-webui-huggingface ./stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface
 git clone https://github.com/camenduru/sd-civitai-browser ./stable-diffusion-webui/extensions/sd-civitai-browser
 git clone https://github.com/kohya-ss/sd-webui-additional-networks ./stable-diffusion-webui/extensions/sd-webui-additional-networks
 git clone https://github.com/Mikubill/sd-webui-controlnet ./stable-diffusion-webui/extensions/sd-webui-controlnet
 git clone https://github.com/jexom/sd-webui-depth-lib ./stable-diffusion-webui/extensions/sd-webui-depth-lib
-git clone https://github.com/hnmr293/posex ./stable-diffusion-webui/extensions/posex
 git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor ./stable-diffusion-webui/extensions/sd-webui-3d-open-pose-editor
 git clone https://github.com/camenduru/sd-webui-tunnels ./stable-diffusion-webui/extensions/sd-webui-tunnels
 git clone https://github.com/etherealxx/batchlinks-webui ./stable-diffusion-webui/extensions/batchlinks-webui
