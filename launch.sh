@@ -16,7 +16,6 @@ git clone https://github.com/camenduru/stable-diffusion-webui-catppuccin ./stabl
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui-rembg ./stable-diffusion-webui/extensions/stable-diffusion-webui-rembg
 git clone https://github.com/ashen-sensored/stable-diffusion-webui-two-shot ./stable-diffusion-webui/extensions/stable-diffusion-webui-two-shot
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper ./stable-diffusion-webui/extensions/sd-webui-aspect-ratio-helper
-git clone https://github.com/tjm35/asymmetric-tiling-sd-webui ./stable-diffusion-webui/extensions/asymmetric-tiling-sd-webui
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_ip2p_fp16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_shuffle_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_shuffle_fp16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11p_sd15_canny_fp16.safetensors
@@ -62,6 +61,16 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckp
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.vae.pt
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/xiaozaa/animaTest/resolve/main/animeoutlineV4_16.safetensors -d ./stable-diffusion-webui/models/Lora -o animeoutlineV4_16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/SG161222/Realistic_Vision_V2.0/resolve/main/Realistic_Vision_V2.0-fp16-no-ema.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Realistic_Vision_V2.0-fp16-no-ema.ckpt
+
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Sasulee/animeLineartMangaLike_v30MangaLike/resolve/main/animeLineartMangaLike_v30MangaLike.safetensors -d ./stable-diffusion-webui/models/Lora -o animeLineartMangaLike_v30MangaLike.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/datasets/Nerfgun3/bad_prompt/resolve/main/bad_prompt_version2.pt -d ./stable-diffusion-webui/embeddings -o bad_prompt_version2.pt
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/datasets/gsdf/EasyNegative/resolve/main/EasyNegative.pt -d ./stable-diffusion-webui/embeddings -o EasyNegative.pt
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/nick-x-hacker/bad-artist/resolve/main/bad-artist.pt -d ./stable-diffusion-webui/embeddings -o bad-artist.pt
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/negative/resolve/main/bad-hands-5.pt -d ./stable-diffusion-webui/embeddings -o bad-hands-5.pt
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/negative/resolve/main/ng_deepnegative_v1_75t.pt -d ./stable-diffusion-webui/embeddings -o ng_deepnegative_v1_75t.pt
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/negative/resolve/main/EasyNegativeV2.safetensors -d ./stable-diffusion-webui/embeddings -o EasyNegativeV2.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/negative/resolve/main/verybadimagenegative_v1.3.pt -d ./stable-diffusion-webui/embeddings -o verybadimagenegative_v1.3.pt
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/negative/resolve/main/bad-image-v2-39000.pt -d ./stable-diffusion-webui/embeddings -o bad-image-v2-39000.pt
 
 sed -i -e '/    api = create_api/a\' -e '    modules.script_callbacks.before_ui_callback()' ./stable-diffusion-webui/webui.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' ./stable-diffusion-webui/modules/shared.py
