@@ -1,4 +1,5 @@
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+git reset --hard 394ffa7
 # git clone https://huggingface.co/embed/negative ./stable-diffusion-webui/embeddings/negative
 # git clone https://huggingface.co/embed/lora ./stable-diffusion-webui/models/Lora/positive
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d ./stable-diffusion-webui/models/ESRGAN -o 4x-UltraSharp.pth
@@ -9,7 +10,6 @@ git clone https://github.com/camenduru/sd-civitai-browser ./stable-diffusion-web
 git clone https://github.com/kohya-ss/sd-webui-additional-networks ./stable-diffusion-webui/extensions/sd-webui-additional-networks
 git clone https://github.com/Mikubill/sd-webui-controlnet ./stable-diffusion-webui/extensions/sd-webui-controlnet
 git clone https://github.com/jexom/sd-webui-depth-lib ./stable-diffusion-webui/extensions/sd-webui-depth-lib
-git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor ./stable-diffusion-webui/extensions/sd-webui-3d-open-pose-editor
 git clone https://github.com/camenduru/sd-webui-tunnels ./stable-diffusion-webui/extensions/sd-webui-tunnels
 git clone https://github.com/etherealxx/batchlinks-webui ./stable-diffusion-webui/extensions/batchlinks-webui
 git clone https://github.com/camenduru/stable-diffusion-webui-catppuccin ./stable-diffusion-webui/extensions/stable-diffusion-webui-catppuccin
