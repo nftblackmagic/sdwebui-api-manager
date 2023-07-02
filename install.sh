@@ -8,8 +8,6 @@ pip3 install -r requirements.txt
 
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 git reset --hard 394ffa7
-# git clone https://huggingface.co/embed/negative ./stable-diffusion-webui/embeddings/negative
-# git clone https://huggingface.co/embed/lora ./stable-diffusion-webui/models/Lora/positive
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d ./stable-diffusion-webui/models/ESRGAN -o 4x-UltraSharp.pth
 wget https://raw.githubusercontent.com/camenduru/stable-diffusion-webui-scripts/main/run_n_times.py -O ./stable-diffusion-webui/scripts/run_n_times.py
 git clone https://github.com/camenduru/stable-diffusion-webui-images-browser ./stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
