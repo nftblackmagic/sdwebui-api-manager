@@ -1,3 +1,11 @@
+apt update
+apt install -y aria2
+apt install wget git python3 python3-venv python3-pip
+python3.10 -m venv venv
+
+apt install vim
+apt-get install tmux
+
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 git reset --hard 394ffa7
 # git clone https://huggingface.co/embed/negative ./stable-diffusion-webui/embeddings/negative
