@@ -66,7 +66,15 @@ docker-compose exec db psql --username=fastapi --dbname=fastapi_dev
 
 ## Model swtich
 
+There is an extra filed in txt2img/img2img api:
+
+    options: Optional[dict]
+
+You can swtich stable diffusion by using this options.
+
+```
 "options":
 {
-"sd_model_checkpoint": ""
+"sd_model_checkpoint": <The model you want to use>
 }
+```
