@@ -102,7 +102,7 @@ def set_options(payload):
 
 
 def extra_single_image(payload):
-    url = 'http://0.0.0.0:7860//sdapi/v1/extra-single-image'
+    url = 'http://0.0.0.0:7860/sdapi/v1/extra-single-image'
 
     headers = {
         'Content-Type': 'application/json',
