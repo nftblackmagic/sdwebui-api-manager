@@ -99,3 +99,26 @@ def set_options(payload):
     res = response.json()
 
     return res
+
+
+def extra_single_image(payload):
+    url = 'http://0.0.0.0:7860//sdapi/v1/extra-single-image'
+
+    headers = {
+        'Content-Type': 'application/json',
+    }
+
+    filter_data = {}
+
+    for k, v in payload.items():
+        if payload[k] != None:
+            filter_data[k] = v
+
+    print("set_options settings", filter_data)
+
+    response = requests.post(url, headers=headers,
+                             data=json.dumps(filter_data))
+
+    res = response.json()
+
+    return res

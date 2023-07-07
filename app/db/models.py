@@ -95,3 +95,20 @@ class Txt2imgArgs(BaseModel):
     save_image: Optional[bool]
     alwayson_scripts: Optional[dict]
     options: Optional[dict]
+
+
+class ExtraSingleImage(BaseModel):
+    resize_mode: Optional[int]
+    show_extras_results: Optional[bool]
+    gfpgan_visibility: Optional[int]
+    codeformer_visibility: Optional[int]
+    codeformer_weight: Optional[float]
+    upscaling_resize: Optional[int]
+    upscaling_resize_w: Optional[int]
+    upscaling_resize_h: Optional[int]
+    upscaling_crop: Optional[bool]
+    upscaler_1: Optional[str]
+    upscaler_2: Optional[str]
+    extras_upscaler_2_visibility: Optional[int]
+    upscale_first: Optional[bool]
+    image: Optional[str]
