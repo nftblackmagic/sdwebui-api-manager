@@ -44,6 +44,16 @@ def progress(req_id: str):
     return reqq.get_result(req_id)
 
 
+@app.get("/controlnet/model_list")
+def controlnet_model_list():
+    return api.controlnet_model_list()
+
+
+@app.get("/controlnet/module_list")
+def controlnet_module_list():
+    return api.controlnet_module_list()
+
+
 @app.post("/sdapi/v1/extra-single-image", status_code=201)
 def extra_single_image(payload: ExtraSingleImage):
     payload = payload.dict()

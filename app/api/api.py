@@ -122,3 +122,31 @@ def extra_single_image(payload):
     res = response.json()
 
     return res
+
+
+def controlnet_model_list():
+    url = 'http://0.0.0.0:7860/controlnet/model_list'
+
+    headers = {
+        'Content-Type': 'application/json',
+    }
+
+    response = requests.get(url, headers=headers)
+
+    res = response.json()
+
+    return res
+
+
+def controlnet_module_list():
+    url = 'http://0.0.0.0:7860/controlnet/module_list'
+
+    headers = {
+        'Content-Type': 'application/json',
+    }
+
+    response = requests.get(url, headers=headers)
+
+    res = response.json()
+
+    return res
