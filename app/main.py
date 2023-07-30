@@ -58,3 +58,8 @@ def controlnet_module_list():
 def extra_single_image(payload: ExtraSingleImage):
     payload = payload.dict()
     return api.extra_single_image(payload)
+
+
+@app.get("/sdapi/v1/sd-models")
+def sd_models():
+    return api.sd_models()

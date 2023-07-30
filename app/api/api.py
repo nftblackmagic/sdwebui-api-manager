@@ -150,3 +150,17 @@ def controlnet_module_list():
     res = response.json()
 
     return res
+
+
+def sd_models():
+    url = 'http://0.0.0.0:7860/sdapi/v1/sd-models'
+
+    headers = {
+        'Content-Type': 'application/json',
+    }
+
+    response = requests.get(url, headers=headers)
+
+    res = response.json()
+
+    return res
