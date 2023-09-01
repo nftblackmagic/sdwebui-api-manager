@@ -21,6 +21,7 @@ git clone https://github.com/camenduru/stable-diffusion-webui-catppuccin ./stabl
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui-rembg ./stable-diffusion-webui/extensions/stable-diffusion-webui-rembg
 git clone https://github.com/ashen-sensored/stable-diffusion-webui-two-shot ./stable-diffusion-webui/extensions/stable-diffusion-webui-two-shot
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper ./stable-diffusion-webui/extensions/sd-webui-aspect-ratio-helper
+git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor ./stable-diffusion-webui/extensions/sd-webui-3d-open-pose-editor
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_ip2p_fp16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_shuffle_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_shuffle_fp16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11p_sd15_canny_fp16.safetensors
@@ -65,7 +66,6 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckp
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/anything-v3.0/resolve/main/Anything-V3.0-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.ckpt
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.vae.pt
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/xiaozaa/animaTest/resolve/main/animeoutlineV4_16.safetensors -d ./stable-diffusion-webui/models/Lora -o animeoutlineV4_16.safetensors
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/SG161222/Realistic_Vision_V2.0/resolve/main/Realistic_Vision_V2.0-fp16-no-ema.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Realistic_Vision_V2.0-fp16-no-ema.ckpt
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors -d ./stable-diffusion-webui/models/Stable-diffusion -o Realistic_Vision_V4.0.safetensors
 
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Sasulee/animeLineartMangaLike_v30MangaLike/resolve/main/animeLineartMangaLike_v30MangaLike.safetensors -d ./stable-diffusion-webui/models/Lora -o animeLineartMangaLike_v30MangaLike.safetensors
