@@ -85,7 +85,7 @@ def add_req_queue(payload, type):
     options = {}
 
     for k, v in payload.items():
-        if (k == "options"):
+        if (k == "options" and v is not None):
             options = v
         if payload[k] != None:
             filter_data[k] = v
